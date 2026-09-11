@@ -1,18 +1,18 @@
 {
   "model": {
-    "n_embd": 128,
+    "n_embd": 192,
     "n_head": 4,
-    "n_layer": 4,
-    "block_size": 128,
-    "dropout": 0.1
+    "n_layer": 6,
+    "block_size": 192,
+    "dropout": 0.15
   },
   "training": {
     "batch_size": 32,
     "learning_rate": 0.0003,
-    "max_iters": 3000,
-    "eval_interval": 250,
+    "max_iters": 18000,
+    "eval_interval": 500,
     "eval_iters": 50,
-    "checkpoint_interval": 500,
+    "checkpoint_interval": 1000,
     "grad_clip": 1.0,
     "device": "auto"
   },
