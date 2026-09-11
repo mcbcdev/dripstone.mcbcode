@@ -1,0 +1,5 @@
+torch>=2.2.0
+
+# Only needed if you want to run the optional local API (src/api.py).
+# Not needed for training or command-line text generation.
+flask>=2.3.0
