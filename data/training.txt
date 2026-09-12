@@ -1,59 +1,1696 @@
-The sun rose slowly over the quiet hills. Birds began to sing in the tall trees near the river. A gentle wind moved through the grass, and the morning air felt cool and fresh.
+---
+title: Introduction
+category: Guide
+description: Introduction to our "Getting Started" Guide
+tags:
+    - guide
+nav_order: 1
+prefix: "1. "
+mentions:
+    - KaiFireborn
+    - SirLich
+    - BlueFrog130
+    - sermah
+    - SmokeyStack
+    - TheItsNameless
+    - MedicalJewel105
+    - smell-of-curry
+    - Hatchibombotar
+    - aym-i
+    - QuazChick
+---
 
-In the small village at the edge of the forest, people were waking up. Smoke rose from chimneys as families prepared breakfast. The smell of fresh bread drifted through the narrow streets.
+## What Are Add-Ons?
 
-An old dog stretched by the door of a stone cottage. It yawned, stood up, and walked slowly toward the garden. The garden was full of ripe tomatoes, tall sunflowers, and rows of green beans.
+An add-on is the Minecraft: Bedrock Edition (_Android, Chromebook, Console, Windows, iOS_) equivalent to Java Edition mods.
 
-A young girl named Mira stepped outside with a basket. She walked to the garden and began picking vegetables for the morning meal. The dog followed her, wagging its tail happily.
+In contrast to Java Edition however, Bedrock Edition APIs are officially maintained by Mojang instead of the community and have backwards compatibility, meaning add-ons made for older versions of Minecraft will continue to work in future versions.
 
-"Good morning," Mira said to the dog. "Did you sleep well?"
+In general, you can think of _mods_ as _modifying_ the game, and _add-ons_ as _adding onto_ the game, following the development opportunities provided by Mojang.
+While directly modifying vanilla content is supported, it can lead to incompatibilities if multiple add-ons modify the same thing and is therefore not recommended.
 
-The dog barked once, as if answering yes. Mira laughed and continued her work, humming a quiet tune as she moved between the rows of plants.
+:::tip ALTERNATIVE RESOURCES
+Although we're very pleased with this guide, it's not the only option for getting started.
+Mojang maintains their own [getting started guide](https://learn.microsoft.com/minecraft/creator/documents/gettingstarted) on the Creator Platform, which you can consider following if you need alternative explanations.
+:::
 
-Down by the river, a group of children were playing near the water. They laughed and splashed each other, enjoying the warm summer day. One boy found a smooth flat stone and skipped it across the surface of the water. It bounced three times before sinking beneath the gentle current.
+## What Will I Learn?
 
-Nearby, an old fisherman sat on a wooden bench, watching the children play. He had been fishing at this same spot for many years, and he knew every bend of the river. His fishing rod rested quietly in his hands, waiting for a fish to bite.
+This guide is a beginner tutorial, intended to walk you through the first stages of add-on creation.
+You will create your very own fully-functional Ghost entity, as well as an Ectoplasm item, and some other associated files.
 
-The fisherman remembered when he was young, playing in this very river with his own friends. Time had passed quickly, but the river looked almost the same as it did back then. The water still moved the same way, curving gently around the old gray rocks.
+By the end of this guide, you will have created an entire add-on all by yourself, which you can play with and modify!
 
-By midday, the sun was high in the sky. The village square filled with people buying and selling goods at the market. A baker sold warm loaves of bread. A farmer sold baskets of apples and pears. A weaver sold blankets woven from soft wool.
+## Is the Guide Up-to-Date?
 
-Mira walked through the market with her empty basket, now filled with vegetables from her garden. She stopped at the baker's stall and traded a handful of tomatoes for a small loaf of bread. The baker smiled and thanked her for the fresh vegetables.
+This guide is written for the most recent _stable_ release of Minecraft: Bedrock Edition.
+Many things won't work in previous versions, and some will be changed in later ones.
 
-"These will make a wonderful soup tonight," the baker said, admiring the tomatoes.
+We will keep the guide as up-to-date as possible, so no need to worry.
 
-"I hope so," Mira replied. "My grandmother taught me how to grow them."
+## Appendix Pages
 
-As the afternoon continued, clouds began to gather over the hills. The wind grew stronger, and the air smelled like rain. Farmers hurried to gather their tools before the storm arrived. Children ran home, laughing as the first drops of rain began to fall.
+Alongside the step-by-step guide, we have a few other pages here in this section, which you can browse at your convenience.
 
-Mira reached her cottage just as the rain grew heavier. She stepped inside, shook the water from her hair, and set the bread and vegetables on the table. The dog curled up near the fireplace, content and dry.
+-   [Understanding JSON](/guide/understanding-json)
+-   [Downloading Example Packs](/guide/download-packs)
+-   [Troubleshooting](/guide/troubleshooting)
 
-Outside, the rain fell steadily on the rooftops of the village. It tapped gently against the windows and filled the small streams that ran along the edges of the road. The garden drank in the water eagerly, and the plants seemed to grow taller with every passing minute.
+## After Finishing the Guide
 
-By evening, the storm had passed. The sky cleared, revealing a soft orange sunset that painted the clouds in shades of pink and gold. The air smelled clean and new, the way it always does after rain.
+At the end of the guide section, your first add-on will be done! To further expand your knowledge, consider doing these:
 
-Mira's grandmother arrived for dinner, carrying a small jar of honey from her beehives. "I brought something sweet," she said, setting the jar on the table.
+-   Start your own project!
+-   Dive into the other aspects of adding onto MCBE (Minecraft: Bedrock Edition), by using the different sections' sub guides listed in the appendix.
 
-They sat together and ate a warm meal of vegetable soup and fresh bread. The dog rested by the fire, occasionally lifting its head whenever it smelled something delicious. Mira's grandmother told stories about the village long ago, when the roads were made of dirt and the forest was even larger than it is now.
+    This includes (but is not limited to) blocks, biomes, items, animation controllers, and even scripting with JavaScript.
 
-"The world changes slowly," her grandmother said, "but some things stay the same. The sun still rises. The river still flows. The garden still grows, if you take care of it."
+    Some sections provide more technical in-depth tutorials and documents for each relevant topic.
 
-Mira nodded, thinking about the seeds she had planted that spring. It was hard to believe how much they had grown since then. What had once been tiny seeds were now tall plants full of vegetables, ready to be picked and shared with the village.
+## Next
 
-After dinner, Mira washed the dishes while her grandmother sat by the window, watching the stars begin to appear in the darkening sky. The dog had fallen asleep near the fire, its paws twitching slightly as it dreamed.
+<Button link="/guide/addons">Next: Add-Ons Explained</Button>
 
-"Goodnight, Mira," her grandmother said, standing up to leave. "Thank you for the wonderful meal."
+---
+title: Add-Ons Explained
+category: Guide
+description: The basics of Add-Ons
+nav_order: 2
+prefix: "2. "
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - sermah
+    - cda94581
+    - BluMonkie
+    - TheItsNameless
+    - MedicalJewel105
+    - ChibiMango
+    - profeplaysminecraft
+    - aym-i
+    - SmokeyStack
+    - QuazChick
+---
 
-"Goodnight," Mira replied. "Thank you for the honey."
+## What are add-ons?
 
-Her grandmother smiled and walked out into the cool evening air, humming a quiet tune as she made her way down the path toward her own cottage.
+Add-ons allow us to modify the contents of our Minecraft Experience by _modifying_ or _removing_ existing content and _adding_ our own. Add-ons are very powerful and allow us to create custom entities, items, and blocks, as well as things like custom loot tables and crafting recipes. Your imagination is the limit!
 
-Mira closed the door, put out the candles, and sat by the fire for a while longer. She thought about the garden, the market, the river, and the storm. It had been a simple day, but a good one.
+Add-ons are primarily written in [json](/guide/understanding-json), which is a structured data-format. An add-on is essentially a collection of json files, images, and sounds, which modify or add to the game in some way.
 
-Outside, the village grew quiet. Lanterns flickered off one by one as families settled in for the night. The river continued to flow gently under the moonlight, curving around the same gray rocks it always had. Somewhere in the forest, an owl called out softly, its voice carrying across the still night air.
+:::tip Scripting API
+Since this guide was written, the definition of 'Add-On' has expanded to include the Javascript scripting API. You can learn more about this API elsewhere on this site.
+:::
 
-The next morning, the sun rose again over the quiet hills. Birds sang in the tall trees near the river. A gentle wind moved through the grass, and the morning air felt cool and fresh, just as it had the day before, and just as it would the day after.
+## What's the difference between a Behavior Pack & a Resource Pack?
 
-Mira woke early, stretched, and looked out her window at the garden below. The tomatoes were ripening nicely, and the sunflowers had grown a little taller overnight. She smiled, got dressed, and grabbed her basket from beside the door.
+Add-ons are split into two pack types: Resource Packs, and Behavior Packs. Both can function independently, but they are most commonly used together. When you have both a Resource Pack and Behavior Pack, this is referred to as an _add-on_.
 
-The dog was already waiting for her, tail wagging, ready for another day in the garden, the market, and the village she called home.
+### Resource Pack
+
+The Resource Pack, also known as the _client_, or RP, is responsible for the _visuals_ and _sounds_ in your add-on. This includes things like:
+
+-   Textures
+-   Sounds
+-   Geometry
+-   Animations
+-   Particles
+
+### Behavior Pack
+
+The Behavior Pack, also known as the _server_, or BP, is responsible for the _logic_ of your add-on. This can include things like:
+
+-   How your entity acts
+-   Crafting recipes
+-   Loot tables
+-   Custom functions
+
+### Communication between packs
+
+In most cases, you will have both a RP and a BP together. These packs can communicate with or will require each other for them to function properly, in the sense that assets defined in one can be accessed in the other. For example, when creating a custom entity, you need two files:
+
+-   An RP entity definition, which describes how your entity will _look_
+-   A BP entity definition, which describes how your entity will _act_
+
+## Next
+
+:::tip What you have learned
+
+-   [x] Add-ons modify Minecraft content or add their own
+-   [x] Add-ons are mostly written in JSON
+-   [x] An add-on is split into the **Resource Pack** and the **Behavior Pack**:
+    -   Resource Packs contain textures, sounds, … and control how the game looks
+    -   Behavior Packs contain entity behavior, crafting recipes, … and control the logic of your game
+
+:::
+
+<Button link="/guide/software-preparation">Next: Software & Preparation</Button>
+
+---
+title: Software & Preparation
+category: Guide
+description: How to setup your development environment
+nav_order: 3
+prefix: "3. "
+mentions:
+    - SirLich
+    - Dreamedc2015
+    - sermah
+    - cda94581
+    - Joelant05
+    - MedicalJewel105
+    - TheItsNameless
+    - TheDoctor15
+    - ChibiMango
+    - profeplaysminecraft
+    - solvedDev
+    - aym-i
+    - SmokeyStack
+    - ThomasOrs
+    - QuazChick
+---
+
+Before you can start creating add-ons, you first have to install the required tools and applications. While development will be easiest on Windows 10, we have provided mobile alternatives for both Android and iOS, where applicable.
+
+This page will provide you a list of software to install, and configuration tips for setup.
+
+## Download Minecraft Bedrock Edition
+
+-   [Windows](https://xbox.com/games/store/minecraft-for-windows/9NBLGGH2JHXJ)
+-   [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en)
+-   [iOS](https://apps.apple.com/us/app/minecraft/id479516143)
+-   [Run MC on Linux](https://discord.gg/VJTZ3KaTx6)
+
+## Picking an Editor
+
+Add-ons can be created using any text editor, however it's much more comfortable to work in a dedicated editor. A good editor can give you code-completion, error-detection, and in-editor documentation.
+
+There are strong opinions about the best editor for beginners, but generally speaking you cannot go wrong selecting either VSCode, or bridge. If you are mobile, you will need to use a mobile alternative.
+
+### VSCode
+
+VSCode is a general purpose text-editor and IDE. With VSCode, you will be able to edit your add-ons in plain-text, guided along by a powerful array of extensions and add-ons. VSCode is a great option for programmers and advanced users.
+
+[⚙️Install VSCode](https://code.visualstudio.com/)
+
+<Spoiler title="Configuring VSCode">
+
+Many packages exist for VSCode that make editing add-ons easier:
+
+-   [Blockception's Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
+-   [.mcfunction support](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
+-   [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
+-   [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
+-   [Prettify-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
+-   [Spell Checker (for writing wiki)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+-   [Snowstorm Particle Editor](https://marketplace.visualstudio.com/items?itemName=JannisX11.snowstorm)
+-   [UUID Generator](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator)
+
+</Spoiler>
+
+### bridge.
+
+[bridge.](https://bridge-core.app/) is a light-weight, dedicated IDE for Minecraft add-ons. It features [innovative features](https://bridge-core.app/guide/features/) such as [entity and block previews](https://bridge-core.app/guide/features/index.html#file-previews), [rich auto-completions and file validations](https://bridge-core.app/guide/features/index.html#auto-completions-and-validation) and [advanced file creation with presets](https://bridge-core.app/guide/features/index.html#advanced-file-creation).
+bridge. includes a regular text editor for experienced add-on creators and a tree editor to make it easy for beginners to get started with editing JSON files.
+
+<Spoiler title="Configuring Bridge">
+
+-   [Read more on why you should use bridge.](https://bridge-core.app/guide/why-bridge)
+-   [Read our guide on getting started with bridge.](https://bridge-core.app/guide/index)
+-   [Try out bridge. online](https://editor.bridge-core.app/)
+
+</Spoiler>
+
+### Mobile Editors
+
+#### Android
+
+-   [ACode Editor](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
+-   [bridge. v2](https://bridge-core.app/)
+
+#### iOS
+
+-   [Kodex](https://apps.apple.com/us/app/kodex/id1038574481)
+-   [bridge. v2](https://bridge-core.app/)
+
+## Blockbench
+
+-   [Blockbench](https://blockbench.net/) is a 'boxy 3D model editor' typically used to create Minecraft models, textures and animations. Also provides a web-browser version which is compatible with mobile.
+
+## Image Editors
+
+When choosing an image editor, it is important to keep in mind that the traditional Minecraft style is composed of simple 16X16 pixel art. There are plenty of powerful and free art programs available for you to use. However, many of these programs have more tools than you will need for Minecraft graphical design and these tools require time to learn.
+
+:::tip
+Choose a program that feels comfortable and easy for you to use. Many Add-on creators use different art programs for different tasks. (Example: One might use paint․net for most of the art, and piskel for Minecraft block animations). Choose what works best for you!
+:::
+
+### Krita
+
+Krita is a powerful open-source art programed with the goal of giving free powerful digital art tools to artists. Krita has more than enough features to cover your Minecraft needs and works on a MAC or PC.
+
+-   **+ Pros:** Plenty of features including a pixel brush with an intuitive user interface.
+-   **- Cons:** Requires a little time to become familiar with the tools.
+
+[Download Krita](https://krita.org/en/)
+
+### GIMP
+
+Gimp is similar to Krita in that it is a free and open source digital art program that has a vast arrays of tools. Where Krita focuses more on illustration, GIMP focuses more on image manipulation (think Photoshop). Gimp also works on MAC or PC.
+
+-   **+ Pros:** GIMP has more than enough tools for editing Minecraft art
+-   **- Cons:** The interface is not intuitive. Even though GIMP is powerful, it requires a steep learning curve.
+
+[Download Gimp](https://www.gimp.org/)
+
+### Paint.NET
+
+Paint.NET is a simple yet powerful image editing and art software. Paint.NET may not have a vast array of tools like Krita and GIMP, but it does offer simplicity and ease of use.
+
+-   **+ Pros:** Easy to use and learn.
+-   **- Cons:** Only works on Windows.
+
+[Download Paint.net](https://www.getpaint.net)
+
+### Pixilart
+
+Pixilart is a web-based pixel art software. It is extremely simple to use since it is focused on pixel art. It also has a powerful resize option that may come in handy, so that you can resize your art without losing the pixel art details.
+
+-   **+ Pros:** Easy to use and learn. Curated specifically for pixel art.
+-   **- Cons:** Must have internet connection. May be missing tools you want.
+
+[Use Pixilart](https://www.pixilart.com/)
+
+### Piskel
+
+Piskel is a web-based pixel art software with a focus of making pixelated sprites (or video game character animations). This tool, similar to Pixilart, is simple to use. This is also a great tool for making flipbooks (Minecraft block or skin animations).
+
+-   **+ Pros:** Easy to use and learn. Perfect for flipbook animations
+-   **- Cons:** Must have internet connection. Only offers the most basic tools.
+
+[Download Piskel](https://www.piskelapp.com/)
+
+### Libresprite
+
+LibreSprite is a free and open source program for creating and animating your sprites. Based on the last GPLv2 commit of Aseprite.
+
+-   **+ Pros**: Basic & easy to use, customizable and curated for pixel artists.
+-   **- Cons**: May not work on Mac, maintained only by a small community.
+
+## Additional Materials
+
+:::tip
+This guide will walk you through the first stages of add-on development, but it is not comprehensive! To learn more about add-ons, you will have to use and reference other sources of information, which we will link to here.
+:::
+
+### Join the Discord
+
+The best place to get help with this guide is to join the [discord server](/discord)(s).
+
+### Vanilla Packs
+
+Minecraft's vanilla files are a good source of reference material. You should download these packs, and store them on a convenient location on your computer. When you need an example of an item, or entity, or animation, you can reference these files for inspiration.
+
+-   [Vanilla packs](https://github.com/Mojang/bedrock-samples/releases)
+
+### Documentation
+
+There are many good sources of Add-on documentation. Familiarize yourself with all of them, and consider bookmarking them.
+
+-   [bedrock.dev](https://bedrock.dev/): Reference documentation.
+-   [wiki.bedrock.dev](https://wiki.bedrock.dev/): Tutorials and guides.
+-   [MS Docs](https://docs.microsoft.com/en-us/minecraft/creator/): The official microsoft creator portal for add-ons.
+
+### Troubleshooting and Additional Help
+
+-   If the json format is very tricky for you, consider reading the [understanding-json guide](/guide/understanding-json).
+-   If you get stuck with an odd error, consider reading the [troubleshooting guide](/guide/troubleshooting).
+-   You can explore additional tools [here](/meta/useful-links).
+
+## Next
+
+:::tip What you have learned
+
+-   [x] Installed the necessary software
+-   [x] Downloaded the Vanilla Example files
+-   [ ] Locate your `com.mojang` folder and create your add-on's workspace.
+-   [ ] Create the manifest and pack icon for your first add-on
+
+:::
+
+<Button link="/guide/project-setup">Next: Project Setup</Button>
+
+---
+title: Create a Custom Item
+category: Guide
+description: How to create your first custom item.
+nav_order: 5
+prefix: "5. "
+mentions:
+    - KaiFireborn
+    - SirLich
+    - cda94581
+    - TheItsNameless
+    - MedicalJewel105
+    - ChibiMango
+    - TheDoctor15
+    - SmokeyStack
+    - unickorn
+    - Sprunkles137
+    - ThomasOrs
+    - davedavis
+    - QuazChick
+---
+
+In Minecraft, we can create custom items, which can be dropped, traded, crafted, and otherwise used like a normal item. There is a lot of power in the system, including the ability to make food, fuel, and tools.
+
+In this tutorial we are going to learn how to create a simple "ectoplasm" item, which we will later use as a loot-table drop for our ghost entity.
+
+<WikiImage src="ectoplasm_view.png" width="150" />
+
+Conceptually, items are made up of two parts:
+
+-   The visuals (texture, name)
+-   The behaviors (how the item should behave)
+
+First, we will learn how to create a new simple item & define its behaviors. In the next section we will assign a texture to this item, so you can see it in game.
+
+## Item Behavior
+
+To make an item we will need a way to identify it and define how we want it to behave. To do this we will be making a file which tell Minecraft to apply certain behaviors to a specific item of our choice.
+
+At the end of this section we will have fully defined the behavior of our item.
+
+### Components
+
+Different items behave differently; you can eat a porkchop, enchanted items glow & eggs can only stack to 16. These are all examples of how the item behaves.
+We are able to define how our custom item will behave by using behavior components.
+
+<Spoiler title="Example Components">
+
+<CodeHeader breadcrumbs="minecraft:item/components" />
+
+```json
+"minecraft:glint": true,
+"minecraft:max_stack_size": 16
+```
+
+</Spoiler>
+
+Components contain information which tells the game what our item should do. For example the component [`"minecraft:glint"`](/items/item-components#glint) determines whether the item should have an enchanted glint to it, so setting it to `true` will apply it.
+All components have a `value` attached to it which we can edit to get the behavior we want.
+
+For our ectoplasm, we will set it to have a stack size of 16, similar to eggs. To do this we use the component [`"minecraft:max_stack_size"`](/items/item-components#max-stack-size) and set its value to `16`.
+
+### Identifier
+
+In order for the game to apply the correct components to the correct item, we need to be able to tell the game which item is ours. We do this by defining an identifier for our item.
+
+An identifier is a name unique to this item. For a vanilla minecraft egg it's identifier is `minecraft:egg`. An identifier is made of two parts,
+
+-   The namespace (`minecraft`)
+-   The id (`egg`)
+
+The namespace is unique to your add-on and you will use it throughout the project. This is to reduce issues if someone adds two packs to your game which both add an ectoplasm item; the namespace reduces the chance of the identifier being the same.
+The namespace that Minecraft use is `minecraft`. Your namespace should be unique to you, for example the authors initials or an abbreviation of the pack name. We will use the namespace `wiki` in our example; for more information on making a namespace check out our page [here](/concepts/namespaces).
+
+The id is an informative shorthand name for your item. Here we will use `ectoplasm`.
+
+Together our custom identifier becomes `wiki:ectoplasm`. Note that we use a colon, `:`, to spilt the namespace and id. When we want to reference our item we will use this identifier, for example using the `/give` command.
+
+### Item File
+
+Now that we have our components and identifier, we can now start defining our item. We define an item by creating an item definition file in our behavior pack. This is where all our information will go.
+
+All item definitions go in `BP/items/`. The name of your file doesn't affect anything, but for ease of navigation it's recommend to name it after your id.
+We will create a file `BP/items/ectoplasm.json`. Here is the the basic layout of the file:
+
+<CodeHeader path="BP/items/ectoplasm.json" />
+
+```json
+{
+    "format_version": "1.26.40",
+    "minecraft:item": {
+        "description": { ... },
+        "components": { ... }
+    }
+}
+```
+
+Most files in your pack will have 2 top level definitions, `"format_version"` and `"minecraft:<file_type>"`.
+The format version defines which version of the add-on system Minecraft will use to read this file. For our item, we will be using `1.26.40` to allow us to use the newest features. For more information on format versions you can check [here](/guide/format-version).
+
+The second definitions defines what kind of file this is. In our case, as this is an item definition, it is `minecraft:item`. Under this is where we will put all our information. This will always contain a `description` key.
+
+Let us look closer at the `"description"`:
+
+<ExampleFile path="BP/items/ectoplasm.json" snippet="minecraft:item/description" />
+
+The description key contains the `identifier` and any other information required. The `identifier` allows the file to know which item to apply the components to.
+The `category` key defines which tab of the creative inventory / recipe book the item would show up in. There are four tabs to choose from: `"construction"`, `"equipment"`, `"items"` and `"nature"`. If this key is not included, then the item will not show in the creative inventory, but you can still get the item by using `/give`.
+
+Now we can actually define the behavior of our item, under `components`. Here we simply place any components we want our item to have.
+This will be our `"minecraft:max_stack_size"` component. For other components you can use, check out our more in depth guide on Items [here](/items/item-components).
+
+<ExampleFile
+    path="BP/items/ectoplasm.json"
+    snippet="minecraft:item/components/minecraft:max_stack_size"
+/>
+
+With that, we have now fully defined our item's behavior. This is what your file should currently look like.
+
+<CodeHeader path="BP/items/ectoplasm.json" />
+
+```json
+{
+    "format_version": "1.26.40",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wiki:ectoplasm",
+            "menu_category": {
+                "category": "items"
+            }
+        },
+        "components": {
+            "minecraft:max_stack_size": 16
+        }
+    }
+}
+```
+
+If you open a world with your add-on, your item should be in the correct menu but invisible and have a strange name.
+
+This is because we haven't defined the visuals yet. However, you should see that it does stack as expected. In the next section, we will define the items texture and assign it to our item.
+
+## Item Visuals
+
+Now that we have an item that works, we want to add a texture and name to it.
+
+Textures are stored in the resource pack under `RP/textures` as images. In order for Minecraft to know which texture to use where, we need to assign a shortname to it, so we can access it.
+
+### Texture
+
+To start we need a texture for our item. For our ectoplasm, we will be using this image.
+
+<ExampleFile path="RP/textures/wiki/items/ectoplasm.png" />
+
+All item textures are stored in `RP/textures/wiki/items/`, where `wiki` should be replaced by your own namespace. From here, you can create any subdirectories you wish.
+It's best to name your texture image files with the items' _id_, in our case it will be `ectoplasm.png`.
+It is recommended to have your images in `.png` format and be of size `16x16`, though Minecraft will accept other formats such as `.jpg` or `.tga`.
+
+Your folder layout should look like this:
+
+<FolderView :paths="[
+    'RP/textures/wiki/items/ectoplasm.png'
+]" />
+
+### Shortname
+
+A shortname is essentially a name that is assigned to the folder path of the texture, so whenever we want to use a texture somewhere, we will use its shortname instead of its folder path.
+
+All item shortnames are stored in one file called `item_texture.json` which is in `RP/textures`. This contains a list of shortnames and its assigned textures.
+
+<CodeHeader path="RP/textures/item_texture.json" />
+
+```json
+{
+    "texture_data": { ... }
+}
+```
+
+Here we have a top level definition, `texture_data`, which is where we will define our shortnames.
+
+Under `texture_data` will our list of item shortname definitions. An example definition looks like this:
+
+<ExampleFile path="RP/textures/item_texture.json" />
+
+Here `wiki:ectoplasm` is our shortname and under `textures` we have the path to our item. Notice that this is relative to the resource pack, and does not include the file extension. Your shortname should be short and unique. We recommend setting it as the namespace and id for the item we are assigning it to.
+
+Now whenever we want to refer our image, we will use the shortname `wiki:ectoplasm`.
+
+### Icon
+
+To finally apply our texture to our item, we add the `minecraft:icon` component to our item definition and set its value to our shortname.
+
+<ExampleFile path="BP/items/ectoplasm.json" snippet="minecraft:item/components" />
+
+Now your texture should appear on your item.
+
+### Item Name
+
+The last thing to add is a nice name to your item. Currently it will look like `item.wiki:ectoplasm`. This is the translation key for your item name, and it is used to allow for [localization](/text/text-intro). To set it, we just have to define it in our language files.
+
+We already created these files when making our `RP` and `BP`, so we just need to add to them.
+
+<CodeHeader path="RP/texts/en_US.lang" />
+
+```lang
+item.wiki:ectoplasm=Ectoplasm
+```
+
+Now when you enter your world, your item should have a name.
+
+## Overview
+
+Now your first custom item, Ectoplasm, is complete! If everything has been done correctly, the item should now be obtainable through the `/give` command in-game, as well as appearing in your creative inventory.
+
+Your folder structure should look like this:
+
+<FolderView :paths="[
+    'RP/texts/en_US.lang',
+    'RP/texts/languages.json',
+    'RP/textures/wiki/items/ectoplasm.png',
+    'RP/textures/item_texture.json',
+    'RP/manifest.json',
+    'RP/pack_icon.png',
+    'BP/items/ectoplasm.json',
+    'BP/texts/en_US.lang',
+    'BP/texts/languages.json',
+    'BP/manifest.json',
+    'BP/pack_icon.png',
+]" />
+
+<Spoiler title="Full ectoplasm.json">
+
+<ExampleFile path="BP/items/ectoplasm.json" />
+
+</Spoiler>
+
+<Spoiler title="Full item_texture.json">
+
+<ExampleFile path="RP/textures/item_texture.json" />
+
+</Spoiler>
+
+If you're having some trouble, check the [Troubleshooting page](/items/troubleshooting-items). If that doesn't help, compare your results with the [example files](https://github.com/Bedrock-OSS/bedrock-examples/tree/main/guide).
+
+## Your Progress So Far
+
+:::tip What you have learned
+
+-   [x] Setup your pack
+-   [x] Create a custom item
+-   [x] How to format the behavior and resource files for an item
+-   [x] What components are and how to use them
+-   [x] How to set an items texture
+-   [ ] Create a custom entity
+-   [ ] Create the entity's loot, spawn rules, and a custom recipe
+
+:::
+
+<Button link="/guide/custom-entity">Next: Custom Entity</Button>
+
+---
+title: Create a Custom Entity
+category: Guide
+description: How to create your first custom entity.
+nav_order: 6
+prefix: "6. "
+mentions:
+    - ThijsHankelMC
+    - TheItsNameless
+    - SmokeyStack
+    - MedicalJewel105
+    - SirLich
+    - ChibiMango
+    - smell-of-curry
+    - Hatchibombotar
+    - Sephodious
+    - LeGend077
+    - Ascent817
+    - BaHuu
+    - Sprunkles137
+    - ThomasOrs
+    - QuazChick
+---
+
+Similarly to custom items, we can also make custom entities with many similar mechanics to the vanilla entities in the game. These entities can be incredibly powerful allowing you to make your own animals which can be bred and tamed or an aggressive mob that attacks anything it sees.
+
+Here we will make a ghost entity which will float, attack the player and drop our ectoplasm item on death.
+
+<WikiImage src="ghost_view.png" width="150" />
+
+Just like items, entities are made up of two parts:
+
+-   The visuals (texture, name, animations, sounds)
+-   The behaviors (movement, attacks)
+
+Differently though, we will need two main files for our entity called the _server_ file and the _client_ file which sit in our BP and RP respectively.
+We will also need additional files to describe the geometry of our entity and its animations, but we will cover those in later sections.
+
+First, we will cover how to create an entity & define its behavior. Next, we will look at how to add the visuals.
+
+## Entity Behavior
+
+Like with items, we need a file to tell our entity how to behave which points an identifier to certain components which define behavior. This file will be very similar to our item behavior file except with a lot more components.
+
+We define our server file in our BP, under the `BP/entities` folder.
+We will call this file `ghost.json`.
+
+This is a basic overview of the file:
+
+<CodeHeader path="BP/entities/ghost.json" />
+
+```json
+{
+    "format_version": "1.26.40",
+    "minecraft:entity": {
+        "description": { ... },
+        "components": { ... }
+    }
+}
+```
+
+Just like with the items, we have our format version and here we have `"minecraft:entity"` as this is an entity file. From now on we won't comment on the format version and recommend to use the version example that we give.
+
+For entities we have a little bit more information under `description`:
+
+<ExampleFile path="BP/entities/ghost.json" snippet="minecraft:entity/description" />
+
+The `identifier` key serves the same purpose, to point to which entity we are talking about.
+The other keys determine what ways we can add the entity to our world:
+
+-   `is_summonable` — Whether it can be summoned using the `/summon` command.
+-   `is_spawnable` — Whether a spawn egg is registered for the entity.
+
+We recommend leaving the settings as they are here as any changes will make it harder to test your entity in game.
+
+### Components
+
+An entity has many more behaviors than an item, so we'll need to define more components for it.
+Here, we will break down different types of components into groups and then look at them closer.
+For more information about entity components, you can check out our page [here](/entities/entity-intro-bp).
+
+### Stat Components
+
+These are the components that you will generally have on every entity. This define some core attributes to your entity.
+
+<CodeHeader path="BP/entities/ghost.json" breadcrumbs="minecraft:entity/components" />
+
+```json
+"minecraft:type_family": {
+    "family": ["wiki:ghost", "monster"]
+},
+"minecraft:health": {
+    "value": 20,
+    "max": 20
+},
+"minecraft:attack": {
+    "damage": 3
+},
+"minecraft:movement": {
+    "value": 0.2
+},
+"minecraft:collision_box": {
+    "width": 0.8,
+    "height": 1.8
+},
+"minecraft:loot": {
+    "table": "loot_tables/wiki/entities/ghost.json"
+}
+```
+
+-   The components `minecraft:health` and `minecraft:attack` and `minecraft:movement` are straight forward and set the entities health, attack damage and movement speed.
+
+-   The `minecraft:collision_box` component of an entity is the box within which the entity interacts with or collides with blocks or other entities, aligned to the bottom middle of the entity.
+    This component also determines the area where the entity can be hit or interacted with.
+
+-   The `minecraft:type_family` components determines the family of the entity which is used to group entities in a similar category together.
+
+    For example `monster` includes zombies, skeletons and creepers.
+    This allows us to be able to select all entities with the `monster` tag.
+
+    Since the ghost family is custom, we've given it the `wiki:` namespace to avoid conflicts with other add-ons that may add their own ghosts with a similar family.
+
+-   The `minecraft:loot` component defines the path to the loot table that the entity will drop on death. We will create this loot table in a later section using this path.
+
+### Movement Components
+
+In order for an entity to move around, we need to define two things, _how_ it moves and _where_ it can move to.
+This is defined using the `movement` and `navigation` components respectively.
+
+You will always need a `movement` and `navigation` component if you want your entity to be able to move.
+
+<CodeHeader path="BP/entities/ghost.json" breadcrumbs="minecraft:entity/components" />
+
+```json
+"minecraft:physics": {},
+"minecraft:jump.static": {},
+"minecraft:movement.basic": {},
+"minecraft:navigation.walk": {
+    "can_walk": true,
+    "avoid_sun": true,
+    "can_pass_doors": true,
+    "can_open_doors": true
+}
+```
+
+-   `minecraft:physics` is used to apply gravity and collision to your entity. Note: you cannot change this component using component groups.
+-   `minecraft:jump.static` allows your entity to jump up blocks for traversal. Both are used on almost every entity.
+
+There are few different types of movement components which allow different types of movement such as `minecraft:movement.swim` used by dolphins, `minecraft:movement.fly` used by parrots and `minecraft:movement.hover` used by bees.
+
+-   The `minecraft:movement.basic` component allows our entity to walk by moving over blocks.
+    To make it seem like our entity is actually floating, we will use our geometry.
+
+-   The `minecraft:navigation.walk` component is a pathfinder which defines what paths we allow our entity to follow.
+    For example skeletons will try not to walk in sunlight, so their pathing stops them from taking paths that would put them in sunlight.
+    Additionally, parrots can fly so they can path into the air unlike walking mobs.
+
+These components have a lot of different settings which allow for interesting pathing.
+The settings we've chosen let our ghost walk along the ground, avoid stepping into sunlight, pass through doorways and open doors.
+
+### Behavior Components
+
+While we have defined _how_ our entity does things, we haven't yet defined _when_ or _what_ they do.
+This is where `behavior` (also known as AI goal) components come in.
+These components define the specific actions that our entity will do.
+
+For example, villagers will try to breed since they have the `minecraft:behavior.breed` component and tamed wolves follow their owners since they have the `minecraft:behavior.follow_owner` component.
+
+We want our ghost to be able to idly walk and look around, target the player when nearby and then attack them. Here are the components that we use:
+
+<CodeHeader path="BP/entities/ghost.json" breadcrumbs="minecraft:entity/components" />
+
+```json
+// Allow for random movement and looking around
+"minecraft:behavior.random_stroll": { ... },
+"minecraft:behavior.random_look_around": { ... },
+"minecraft:behavior.look_at_player": { ... },
+// Allow for targeting
+"minecraft:behavior.hurt_by_target": { ... },
+"minecraft:behavior.nearest_attackable_target": { ... },
+// Allow for attacking
+"minecraft:behavior.delayed_attack": { ... }
+```
+
+The first component, `minecraft:behavior.random_stroll` allows our entity to choose a random point nearby to path to periodically.
+This path is created with our `navigation` component and then the type of movement is defined by our `movement` component.
+
+The next two components allow our entity to randomly look around and to look at the player if they are within range.
+
+For attacking, in order for our entity to attack, it needs a `target`.
+The two behaviors `minecraft:behavior.hurt_by_target` and `minecraft:behavior.nearest_attackable_target` will cause the entity to target any entity that hurts it and target any the nearest enemy to it within range.
+
+Finally, the `minecraft:behavior.delayed_attack` is how our entity actually attacks it target.
+
+Each of these behaviors have further settings to tweak the exact behavior we want.
+
+<CodeHeader path="BP/entities/ghost.json" breadcrumbs="minecraft:entity/components" />
+
+```json
+// Allow for random movement and looking around
+"minecraft:behavior.random_stroll": {
+    "priority": 6,
+    "speed_multiplier": 1
+},
+"minecraft:behavior.random_look_around": {
+    "priority": 7
+},
+"minecraft:behavior.look_at_player": {
+    "priority": 7,
+    "look_distance": 6,
+    "probability": 0.02
+},
+// Allow for targeting
+"minecraft:behavior.hurt_by_target": {
+    "priority": 1
+},
+"minecraft:behavior.nearest_attackable_target": {
+    "priority": 2,
+    "within_radius": 25,
+    "reselect_targets": true,
+    "entity_types": [
+        {
+            "filters": {
+                "any_of": [
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                    }
+                ]
+            },
+            "max_dist": 35
+        }
+    ]
+},
+// Allow for attacking
+"minecraft:behavior.delayed_attack": {
+    "priority": 0,
+    "attack_once": false,
+    "track_target": true,
+    "require_complete_path": false,
+    "random_stop_interval": 0,
+    "reach_multiplier": 1.5,
+    "speed_multiplier": 1,
+    "attack_duration": 0.75,
+    "hit_delay_pct": 0.5
+}
+```
+
+For more details about what each of these options do, you can read about them on the official documentation, [bedrock.dev](https://bedrock.dev/docs/stable/Entities).
+
+#### Priority
+
+All behaviors contain a `"priority"` field. This field is used to decide which behavior to run when many can.
+
+When the entity is picking something to do, it searches all its behaviors from lowest priority to the highest priority and picks the first one that it can do. For this reason, you need to make important behaviors like `minecraft:behavior.nearest_attackable_target` lower than behaviors like `minecraft:behavior.look_at_player`. If the `look_at_player` behavior is lower, it will always run this first when the player is close, and the entity will never attack.
+
+In general, important behaviors will have a priority of `0` or `1`.
+
+### Full Entity Behavior File
+
+<Spoiler title="Full ghost.json">
+
+<ExampleFile path="BP/entities/ghost.json" />
+
+</Spoiler>
+
+With that we have completed our entity behavior file.
+
+More complex entities can also have different _states_, where they will behave differently depending on what state they are in. For example, a wild wolf will walk around freely, but once it is tamed it will follow the player. An _event_ (being tamed) caused the wolf to change _states_. This feature allows us to create dynamic entities which can perform different actions when different events occurs. You can learn more about this in our guide [here](/entities/entity-intro-bp).
+
+If you open your world and try to summon in your entity using `/summon wiki:ghost`, it should behave like we expect but there will only be a shadow on the ground. You might also see its name as a translation key, similar to how it happened with our item.
+
+Next we will learn how to create our resource or client file and how to assign our texture, geometry and animations.
+
+## Entity Resources
+
+Applying visuals to an entity is very different to an item. Since there are a lot more pieces, we have a separate file dedicated to defining the resources.
+This is the called entity _client file_ which we will name `ghost.entity.json`. These files go in the folder `RP/entity`.
+
+In this section, we will use the example resources created for our ghost entity to demonstrate how to add them to an entity. In the next section of the guide, we explain how to use Blockbench, a dedicated 3D editor, to create your own entity geometry and animations.
+
+### Model
+
+The 'model' for our entity is the shape of our entity, also called the 'geometry'.
+This describes the visual shape of our entity, like how a pig is a box with 4 legs and a head whereas a chicken has 2 legs, a head and wings.
+The geometry is stored as a JSON file in the `RP/models/entity` folder and ours will be named `ghost.geo.json`.
+
+This file is automatically generated by Blockbench for us, so there is no need to learn or modify its JSON format by hand.
+As such, we won't go into full detail when looking at the file. It stores the data about each block in our model, such as size, position and rotation.
+
+<ExampleFile path="RP/models/entity/ghost.geo.json" />
+
+The important information that we need is the `identifier` which we will use to reference our geometry file, which here is `geometry.ghost`.
+
+### Texture
+
+Our entity now has its shape, but it also needs a texture.
+This texture can also be created in Blockbench and is simply a `.png` file.
+
+<ExampleFile path="RP/textures/wiki/entity/ghost.png" />
+
+You may recall, when we made our item, we assigned a shortname to our texture to reference later.
+We will be doing something similar for our entity within our entity file, so make sure you keep the file path to the texture.
+
+### Animations
+
+Animations allow our entity to have more life and move in different ways.
+We can have as many animations for an entity as we want and we can also trigger them at different types using an _animation controller_ which we will cover in the next section.
+
+Depending on your entity, you may want different animations.
+For our ghost we will have an `idle`, `attack` and `move` animation.
+These files are also created automatically in Blockbench, so we won't look into it in full detail.
+
+An animation file can contain one or multiple animations within it. Our animations will all be under one file called `ghost.animations.json` inside the `RP/animations` folder.
+
+<CodeHeader path="RP/animations/ghost.animations.json" />
+
+```json
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.ghost.idle": {...},
+        "animation.ghost.attack": {...},
+        "animation.ghost.move": {...}
+    }
+}
+```
+
+Each animation is defined by the key, so here our three animation identifiers are `animation.ghost.idle`, `animation.ghost.attack` and `animation.ghost.move`.
+
+:::tip NOTE
+If you have multiple animation files for one entity, consider moving them all into one file to keep your folders easy to read and navigate.
+If not, ensure that when you are referencing the animation in your entity file, you use the animation identifier and _not_ the file name.
+:::
+
+<Spoiler title="Full Animation File">
+
+<ExampleFile path="RP/animations/ghost.animations.json" />
+
+</Spoiler>
+
+### Animation Controllers
+
+We have our animations but our entity won't know when to play them. This is where animation controllers are used.
+These controllers at their core, _control_ how the animations are played.
+An animation controller is made up of _states_ and _transitions_ between states.
+This allows us to play certain animations when the entity is in certain states, which we can transition between when certain conditions are met.
+
+For example, while an entity is moving, transition to the moving state which plays the `move` animation
+Or while an entity is attacking, transition to the attack state which plays the `attack` animation.
+
+Let us look at our animation controller for attacking.
+
+<ExampleFile
+    path="RP/animation_controllers/ghost.ac.json"
+    snippet="animation_controllers/controller.animation.ghost.attack"
+/>
+
+You can see we have two states, `default` and `attacking`.
+Our entity begins in the `default` state.
+
+You can see under `transitions`, we have a condition, which when true will transfer the entity to a state.
+
+<ExampleFile
+    path="RP/animation_controllers/ghost.ac.json"
+    snippet="animation_controllers/controller.animation.ghost.attack/states/default/transitions/0"
+/>
+
+Here, `attacking` is the state that will be transitioned to, and `q.is_delayed_attacking`{lang=molang} is the condition that needs to be true for the transition to occur.
+This condition is called a _query_. These queries can tell us things about the entity such as if it is attacking or moving. The query `q.is_delayed_attacking`{lang=molang} will return `true`{lang=molang} when the entity is performing the attack behavior.
+
+When the entity is in the `attacking` state, it also has a transition back to the default state.
+Now the condition is `!q.is_delayed_attacking`{lang=molang}.
+Here the `!` means _not_, so it will return the opposite result of `q.is_delayed_attacking`{lang=molang} (if `q.is_delayed_attacking`{lang=molang} returns `true`{lang=molang} then `!q.is_delayed_attacking`{lang=molang} returns `false`{lang=molang}).
+
+This state also has `animations`. These are the animations that will always play while in this state.
+Note that we are using the _shortname_ for our animation here, which we will reference in our entity file later.
+If you don't, the animations will not play.
+There is also the `blend_transition` key, which allows the animations to slowly fade into each other.
+A higher number means a longer blending time.
+
+We can also make a similar controller for our `move` and `idle` animation.
+
+<ExampleFile
+    path="RP/animation_controllers/ghost.ac.json"
+    snippet="animation_controllers/controller.animation.ghost.walk"
+/>
+
+This follows a similar pattern with some additions.
+We now have `initial_state` which tells the controller which state to start on.
+If none is listed then it will start on the state `default`.
+
+You'll also notice our queries look slightly different.
+Here the query `q.modified_move_speed` returns a value, so in order to return a boolean (i.e. true or false) we look at when the value is above or below `0.1`.
+For more in depth information on animation controllers, you can read [here](/animation-controllers/animation-controllers-intro).
+
+Now that we have our animation controllers, we can add them to our animation controller file.
+Similarly to animations, the key is the identifier for our animation controller; `controller.animation.ghost.attack` and `controller.animation.ghost.walk`.
+
+Our file will be called `ghost.ac.json` and will be placed in the `RP/animation_controllers` folder.
+
+<Spoiler title="Full Animation Controller File">
+
+<ExampleFile path="RP/animation_controllers/ghost.ac.json" />
+
+</Spoiler>
+
+With that, we have created all the resources we need for our entity. We will now create our entity file.
+
+### Client Entity File
+
+The client file contains all the references to the visual components of our entity.
+Our client file will go in `RP/entity` and we name this file `ghost.entity.json`.
+This file will have all our information under the `description` key.
+
+We begin with the familiar formatting:
+
+<CodeHeader path="RP/entity/ghost.entity.json" />
+
+```json
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:ghost"
+        }
+    }
+}
+```
+
+We use the same identifier as for our behavior file in order to point to the correct entity.
+
+To begin, we need to define the visuals of our entity in our file so we know which models and textures we are using. We also need to do the same for our animations and animation controllers.
+
+#### Render Controller
+
+In order to display our entity it needs to be _rendered_.
+For this to happen, it needs a material, texture and geometry. We have already made a texture and geometry.
+A material defines how our texture will be displayed.
+For example, a skeleton uses a material to allow for transparency and an enderman uses a material to allow its eyes to glow.
+
+Since our ghost has some transparency, we need a material which will render this correctly. Luckily, Minecraft has many pre-built materials for us to use such as `entity_alphatest` which will allow us to do this. You can create your own materials but be warned it is very advanced. If you are interested though, you can begin [here](/documentation/materials).
+
+For us to now use these resources, we need to define a reference to them with a shortname. This is similar to how we did for items within the `item_texture.json` file, except here we do it in the entity client file. Here is the layout.
+
+<CodeHeader path="RP/entity/ghost.entity.json" />
+
+```json
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/wiki/entity/ghost"
+            },
+            "geometry": {
+                "default": "geometry.ghost"
+            }
+        }
+    }
+}
+```
+
+Here for each category we have assigned the shortname `default` for each of our resources, ensuring to use the correct paths and identifiers.
+We are able to define multiple of these, though that is more advanced. Now we can use these shortnames to reference our resources.
+
+In order for these resources to be rendered, we need to tell the game which resources to render in. This is controlled with a _render controller_.
+The controller tells the game which geometry, material and texture to render for the entity, allowing us to see it in game.
+
+The render controller is defined in a separate file and uses the shortnames we defined in our entity file.
+The file is called `ghost.rc.json` and is in the `RP/render_controllers` folder:
+
+<ExampleFile path="RP/render_controllers/ghost.rc.json" />
+
+This follows a similar structure to the animation controller and animation file, with our render controller identifier being `controller.render.ghost`.
+This tells the game that the resource rendered should be the resource with shortname `default`.
+
+Render controllers can also allow you to display different textures or apply different materials to different parts of our model.
+Under `materials`, we use `"*"` to mean that we apply this material to all _bones_ in our model (i.e. each cube in our model).
+For more information on render controllers, you can check our page [here](/entities/render-controllers).
+
+:::tip
+If you keep your shortnames consistent, you can actually reference the same render controller for multiple entities.
+:::
+
+Now to tell your entity to use this render controller, we add it to our entity file like so:
+
+<ExampleFile
+    path="RP/entity/ghost.entity.json"
+    snippet="minecraft:client_entity/description/render_controllers"
+/>
+
+With that our entity file should look like this.
+
+<CodeHeader path="RP/entity/ghost.entity.json" />
+
+```json
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "wiki:ghost",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/wiki/entity/ghost"
+            },
+            "geometry": {
+                "default": "geometry.ghost"
+            },
+            "render_controllers": ["controller.render.ghost"]
+        }
+    }
+}
+```
+
+Now if we spawn our entity into a world, we should be able to see it.
+
+#### Scripts
+
+Now let us add our animations. Like with our other resources, we need to define shortnames for them. Keep in mind, we also need to define shortnames our animation controllers as well.
+
+<ExampleFile
+    path="RP/entity/ghost.entity.json"
+    snippet="minecraft:client_entity/description/animations"
+/>
+
+You'll recall, these are the shortnames we used in our animation controllers; any animations we want to use in animation controllers, must be defined with a shortname in the entity client file.
+
+Now that we have animations and animation controllers referenced, we need to decide when the entity will run them. This is done using `scripts`:
+
+<ExampleFile
+    path="RP/entity/ghost.entity.json"
+    snippet="minecraft:client_entity/description/scripts"
+/>
+
+Here, `scripts` tell the entity to perform certain actions at certain times.
+The `animate` key will run any animation or controller referenced every tick.
+This means that each tick our animation controller will check whether to transition to a new state and perform any animations in the state they are in.
+
+With this our animations should be working correctly.
+
+#### Spawn Egg
+
+The final step to finalize our entity client file, is to create a spawn egg for our entity.
+Luckily, our file can generate one for us with the key `spawn_egg`.
+
+<ExampleFile
+    path="RP/entity/ghost.entity.json"
+    snippet="minecraft:client_entity/description/spawn_egg"
+/>
+
+This will generate a spawn egg which will summon our entity when used. It uses the hex codes in `base_color` and `overlay_color` to color the egg.
+If you want a custom icon for your spawn egg, instead use the key `texture` and put in the shortname to the texture you want.
+Follow the method in the item tutorial on how to define an texture shortname for an item.
+
+<CodeHeader breadcrumbs="minecraft:client_entity/description" />
+
+```json
+"spawn_egg": {
+    "texture": "wiki:texture_shortname"
+}
+```
+
+With that, we have completed our entity client file.
+
+<Spoiler title="Full ghost.entity.json">
+
+<ExampleFile path="RP/entity/ghost.entity.json" />
+
+</Spoiler>
+
+### Entity Name
+
+The final steps are to add our entity's name to the language files.
+You may have also noticed that if you created a spawn egg, it will also have a translation key for a name; we will also add this.
+Within `en_US.lang`, make sure you add names for both the entity and entity spawn egg item.
+
+They should look similar to this:
+
+<CodeHeader path="RP/texts/en_US.lang" />
+
+```lang
+entity.wiki:ghost.name=Ghost
+item.spawn_egg.entity.wiki:ghost.name=Ghost
+```
+
+## Overview
+
+Done! Your entity should now show up in Minecraft, complete with all behaviors and visuals, including animations!
+You should be able to summon your entity using `/summon` or by finding the spawn egg in the creative menu.
+
+Your folder structure should look like this:
+
+<FolderView :paths="[
+    'RP/animation_controllers/ghost.ac.json',
+    'RP/animations/ghost.animations.json',
+    'RP/entity/ghost.entity.json',
+    'RP/models/entity/ghost.geo.json',
+    'RP/render_controllers/ghost.rc.json',
+    'RP/texts/en_US.lang',
+    'RP/texts/languages.json',
+    'RP/textures/wiki/entity/ghost.png',
+    'RP/textures/wiki/items/ectoplasm.png',
+    'RP/textures/item_texture.json',
+    'RP/manifest.json',
+    'RP/pack_icon.png',
+    'BP/entities/ghost.json',
+    'BP/items/ectoplasm.json',
+    'BP/texts/en_US.lang',
+    'BP/texts/languages.json',
+    'BP/manifest.json',
+    'BP/pack_icon.png',
+]" />
+
+## Your Progress So Far
+
+:::tip What you have learned
+
+-   [x] Set up your pack
+-   [x] Create a custom item
+-   [x] Create a custom entity
+-   [x] How to format the behavior and resource files for an item
+-   [x] How to set an entities texture
+-   [x] How to use models, animations, and animation controllers to make your entity more exciting
+-   [ ] Create the entity's loot, spawn rules, and a custom recipe
+
+:::
+
+<Button link="/guide/loot-table">Next: Loot Table, Spawn Rules & Recipe</Button>
+
+---
+title: "Blockbench: Modeling, Texturing & Animating"
+category: Guide
+description: A first peek into Blockbench.
+prefix: "7. "
+nav_order: 7
+mentions:
+    - KaiFireborn
+    - SirLich
+    - Dreamedc2015
+    - SmokeyStack
+    - sermah
+    - cda94581
+    - TheItsNameless
+    - ThijsHankelMC
+    - MedicalJewel105
+    - ChibiMango
+    - smell-of-curry
+    - QuazChick
+---
+
+Blockbench is a free software designed to make Minecraft modeling, texturing, and animating possible. It is available for mobile browsers, Windows 10, and macOS. Please install it at [blockbench.net](https://blockbench.net/).
+
+## Modeling
+
+Let's get started.
+
+1.  Open Blockbench.
+2.  Choose _File>New>Bedrock Model_. This is important because Minecraft Bedrock will not be able to read Java models.
+3.  A screen like this will have popped up.
+
+    ![](create_entity_project_menu.png)
+
+    -   `"File name:"` is self-explanatory. My file will generate as "skele_yaklin.geo.json".
+    -   `"Model Identifier:"` is the model identifier (namespace not required), a short name for this ID will be defined later.
+    -   `"Box UV"` has to be checked on for automatic UV editing and unwrapping for texturing.
+    -   `"Texture Height"` and `"Texture Width"` define the resolution of the model's textures.
+
+4.  Press confirm. You'll see a screen like this:
+
+    ![](create_entity_workspace.png)
+
+    -   You can see many tools here: move, resize, rotate, etc.
+    -   You can add bones and cubes in the menu on the right-bottom corner. Cubes can rotate on their own; the bones will carry everything in them along;
+
+5.  Now, you are ready to create your model! For more in-depth tutorials on modeling, please check out the videos by Everbloom Games below.
+
+<YouTubeEmbed id="XqzxL_-XjA0" />
+
+<YouTubeEmbed id="j7ISUImhgpc" />
+
+## Texturing
+
+Now that you have your model in place let's start texturing!
+
+1.  On the left-bottom panel, click "Create Texture"
+
+2.  Write down your image file name under "Name:". Mine will export as `ghost.png`.
+    Check "Template:" to make a template texture - it'll be easier to work with.
+
+    ![](create_entity_texture_1.png)
+
+3.  Check everything and change your resolution to the one you set in the very first step.
+
+    ![](create_entity_texture_2.png)
+
+4.  Go to "Paint" in the upper right corner and paint your texture.
+
+## Animating
+
+Once your model and texture are done, you can start animating. Go to "Animate" in the upper right corner.
+
+You might want to adjust one of the toolbars by adding "Export Animations" and "Import Animations" like this:
+![](create_entity_animation_1.png)
+
+1.  Click "Add Animation" [the plus icon on the top right side] and name it `animation.{yourEntityName}.move`.
+    Create the first frame of your walking animation under 0 on the timeline by moving the legs.
+
+    ![](create_entity_animation_2.png)
+
+2.  Create the second frame under 0.5 on the timeline.
+
+    ![](create_entity_animation_3.png)
+
+3.  Finally, copy the first frame to the third frame by placing your timeline cursor on 1.0 and selecting the first frame, then ctrl+c, ctrl+v.
+
+4.  Right-click the animation and tick "Loop" for the animation to loop.
+    ![](create_entity_animation_4.png)
+
+## Saving Your Work
+
+Now that our model, texture, and walk animation are complete, you can save your work.
+
+Go to _File > Save Model_ or _File > Export Bedrock Geometry_. Save the model in `RP/models/entity`, the texture in `RP/textures/wiki/entity/` (where `wiki` is replaced by your own namespace) and the animation in `RP/animations`. Congratulations! You've successfully created your first entity's visuals! You can see the file examples below.
+
+_Meanwhile, why not upgrade the visuals of your own unique entities' or create another one?_
+
+<Spoiler title="Show code">
+
+<ExampleFile path="RP/models/entity/ghost.geo.json" />
+<ExampleFile path="RP/animations/ghost.animations.json" />
+
+</Spoiler>
+
+## What You Have Learned
+
+-   [x] How to create an entity in Blockbench
+-   [x] How to use Blockbench to model, texture, and animate your entity
+
+---
+title: Adding Loot Tables, Spawn Rules & Crafting Recipes
+category: Guide
+description: How to add your first Loot Table, Spawn Rules and Crafting Recipe
+nav_order: 8
+prefix: "8. "
+mentions:
+    - KaiFireborn
+    - SirLich
+    - sermah
+    - cda94581
+    - Ultr4Anubis
+    - TheItsNameless
+    - Ciosciaa
+    - MedicalJewel105
+    - ChibiMango
+    - fraysdev
+    - QuazChick
+---
+
+Next, we'll enhance the custom Ghost entity by adding some more basic mechanics to it:
+
+## Loot Tables
+
+First, we'll make the ghost drop Ectoplasm upon death: create the following file:
+
+<ExampleFile path="BP/loot_tables/wiki/entities/ghost.json" />
+
+-   Loot tables consist of `pools`.
+    Each pool defines a different set of loot that will be dropped.
+    A pool consists of 3 parts, `rolls`, `entries` and `conditions`.
+    The `conditions` are optional and won't be covered in this guide.
+
+-   The `rolls` section defines how many times a random entry will be chosen from the following `entries` object.
+
+-   The `entries` part defines the items from which the loot table can choose.
+    Each roll a new item will be chosen.
+
+-   `type` defines what will be chosen.
+    You can set it to `item` or `loot_table` to either chose an item or an different loot table.
+
+-   `name` defines the identifier of the item (with its namespace) that will be selected.
+
+-   `weight` is optional and defines how likely it is, that this item will be selected.
+    If there is more than one item in the `entries` section, the `weight` attribute can be used to make the probability of one item more or less likely.
+    If it isn't set, it defaults to 1.
+
+-   `functions` provide a powerful way of customizing the item that will be returned.
+    They can add enchantments to an item, set an item's name or simply setting the number of items that will be dropped.
+    To define the number of items, we use `set_count`.
+    It takes the `count` attribute, which sets the maximum and minimum amount of items that will be dropped.
+
+For more information on loot tables, see our extended guide: [Loot Tables](/loot/loot-tables)!
+
+## Spawn Rules
+
+Next, we'll make the ghost spawn in deserts at night:
+
+<ExampleFile path="BP/spawn_rules/ghost.json" />
+
+-   You already know what `format_version` does.
+-   Inside the `minecraft:spawn_rules` part we define our spawn rules.
+-   The `description` defines the basic properties of the file.
+    -   The `identifier` is used to define which entity these spawn rules apply to.
+    -   `population_control` is used to limit the amount of entities that will be spawned.
+        Once the pool that is defined inside of `population_control` is full, no more entities will be spawned.
+-   With `conditions` we can define rules that limit the spawning of this entity to special cases. We will shortly describe each condition used here, but you can learn more conditions and how to use them [here](/entities/vanilla-usage-spawn-rules).
+    -   `spawns_on_surface` allows the mob to only spawn on surfaces.
+    -   `minecraft:brightness_filter` limits the spawning to areas with a lighting level thats between the defined values. If `adjust_for_weather` is `true`, the light level decrease during rain and storms will be ignored.
+    -   `minecraft:difficulty_filter` defines the difficulty level needed to spawn the entity.
+    -   `weight` defines how often this entity will spawn. The higher this value, the more often the mob will spawn.
+    -   `minecraft:herd`defines how many entities will be spawned at once.
+    -   With `minecraft:biome_filter` we define the biomes in which the entity is able to spawn.
+
+To learn more about spawn rules, take a look at our list of [vanilla spawn rules](/entities/vanilla-usage-spawn-rules).
+
+## Crafting Recipes
+
+And finally, as an introduction to recipes, we'll make the Ectoplasm craftable into Ectoplasm Blocks:
+
+<ExampleFile path="BP/recipes/ectoplasm_block.json" />
+
+-   `format_version` is already known.
+-   With `recipe_shaped` we define, that each ingredient has a set place in the crafting grid. There are some other types that can be used, you can find more information [here](/loot/recipes).
+-   Inside `description` we define the `identifier` of this recipe, which is the name of the recipe.
+-   `tags` is a list of crafting tags which determine the blocks (crafting table, furnace, etc) that are able to use this recipe.
+-   `pattern` defines the arrangement of the items inside the crafting grid. Each `#` represents the item that is set under `key`.
+    In this case, the whole 3x3 grid has to be filled with `"wiki:ectoplasm"`{lang=json}, our own item.
+    It is possible to define more items, just add an entry to `key` and set the key to a character, that you can use inside `pattern`.
+-   `result` contains an `item`, which is set to the item that will be the output of this recipe.
+
+For more information on this topic, visit our page about [recipes](/loot/recipes)!
+
+## What You Have Learned
+
+:::tip What you have learned:
+
+-   How to create a loot table and define which items a mob is able to drop
+-   How to set the rules for a mob to spawn
+-   How to create new crafting recipes
+
+:::
+
+## Your Progress So Far
+
+**What you've done:**
+
+-   [x] Setup your pack
+-   [x] Create a custom item
+-   [x] Create a custom entity
+-   [x] Create the entity's loot, spawn rules, and a custom recipe
+
+Congratulations! you have finished the Guide and created your first Add-on. 🎉
+
+---
+title: Understanding JSON
+category: Extra
+description: A first peek into JSON
+nav_order: 1
+prefix: "a. "
+mentions:
+    - SirLich
+    - solvedDev
+    - Joelant05
+    - Dreamedc2015
+    - sermah
+    - cda94581
+    - QuazChick
+---
+
+::: tip
+This is an appendix page. You can start the guide from the beginning [here](/guide/introduction).
+:::
+
+JSON is a simple format for writing text files, in a way that is understandable to both Humans and Computers. Bedrock uses .json files as the "language" of Add-Ons, so you will need a solid understand of how to read and write json! If you have never heard of JSON before, you are encouraged to read through [this tutorial](https://www.digitalocean.com/community/tutorials/an-introduction-to-json). It will teach you everything you need to know about writing valid JSON files.
+
+## Valid JSON
+
+The important thing to remember when writing JSON is that it must be _completely error free_, or it won't work at all. Even one wrong character, or one extra comma will cause the entire file to fail. For this reason, it's super important you write valid JSON.
+
+We can use an online tool called [json lint](https://jsonlint.com/) to tell us whether our JSON is valid. Simply paste your code into the website, and press `Validate JSON`. You will get a response indicating whether your code is correct or not, as well as the location and type of any errors.
+
+## Data Structures
+
+In JSON, data can be written in a number of formats. Each format is specialized for the kind of data it wants to represent. Here are the structures we have available:
+
+| Name   | Example  | Explanation                            |
+| ------ | -------- | -------------------------------------- |
+| String | "hello!" | Words, or characters. Requires quotes. |
+| Int    | 15       | A number. No quotes.                   |
+| Float  | 1.2      | A fractional number. No quotes.        |
+| Bool   | true     | Either true or false. No quotes.       |
+
+And now, in .json format:
+
+```json
+{
+    "my_string": "hello!",
+    "my_int": 15,
+    "my_float": 1.2,
+    "my_bool": true
+}
+```
+
+In addition to these simple structures, we also have access to two special structures. Special structures are used to _nest_ other data together.
+
+### Arrays
+
+Arrays are written as two square brackets `[]`. They represent a _list_. We can put _other data structures_ inside of the list. Each _element_ of the list should be separated by a comma.
+
+Some examples:
+
+| Structure       | Comment                               |
+| --------------- | ------------------------------------- |
+| [1, 2, 3]       | A list of integers.                   |
+| ["Red", "blue"] | A list of strings. Notice the quotes! |
+
+And now, in .json format:
+
+```json
+{
+    "my_ints": [1, 2, 3],
+    "my_strings": ["Red", "blue"]
+}
+```
+
+### Objects
+
+Objects are written as two curly-brackets `{}`. Objects are a special syntax which contains _named_ data structures. The name is called a `key`, and the structure is called a `value`. The examples earlier in this page was a _dictionary_ containing examples of the other data types.
+
+This key-value syntax looks like this: `"<key>": <any structure>`. Notice the quotes around the key, and the colon.
+
+Here is an example of an object, which contains a few _key-value-pairs_.
+
+```json
+{
+    "a_list_of_integers": [1, 2, 3],
+    "is_json_cool": true
+}
+```
+
+We need to separate each key-value pair with a comma.
+
+We call the key-value pairs of an object as its _child_ or as being _inside_ the object.
+
+## JSON Structure
+
+In Minecraft, JSON files always begin with an _object_, which you can remember is two curly brackets:`{}`. We call this the _top level object_. We write our code _inside_ of this object, in the form of key-value pairs.
+
+Here is an example of a simple json file, used for Minecraft add-ons:
+
+```json
+{
+    "format_version": "1.12.0",
+    "animations": {
+        "animation.car.wheel_spin": {
+            "loop": true,
+            "animation_length": 1.0,
+            "bones": {
+                "front_wheels": {
+                    "rotation": ["q.modified_distance_moved * -30", 0, 0]
+                },
+                "back_wheels": {
+                    "rotation": ["q.modified_distance_moved * -30", 0, 0]
+                }
+            }
+        }
+    }
+}
+```
+
+Take a careful look at the format. You will see that the entire structure is built out the data-structures that we have already learned. If you want to practice your json skills, try to answer these questions:
+
+-   How many keys are there in the _top level object_. Can you name them?
+-   What is the value of `format_version`?
+-   What kind of data is stored in the `"loop"` key? (string, boolean, etc)
+
+## Troubleshooting Examples
+
+Here are a few examples, to help you understand feedback you might receive on the discord or online. We tend to use technical jargon when talking about errors in JSON, so hopefully this section helps familiarize you with the terms:
+
+---
+
+You wrote: `"format_version": 1.12`
+
+They said: "_The value for format_version is the wrong type. It should be a string._
+
+Remember that `type` means one of the structures: `String`, `Int`, `Float`, `Array` or `Object`. If we examine our code, we will see that we put `format_version` to a `Float`, instead of a `String`. We can fix this problem by adding quotes around the `"1.12"`.
+
+---
+
+You wrote: `[1 2 5 6]`
+
+They said: "_Your array is missing commas._"
+
+Remember that array elements need to be separated by commas. Your array should look like this: `[1, 2, 5, 6]`
+
+---
+
+They said: _"You accidentally put the format version inside your description. It should go outside at the top level_".
+
+This means that the key-value pair for `"format_version"` as a _child_ of the description. You should copy/paste the key-value pair out from the description object, and place it at the top level.
+
+---
+title: Troubleshooting
+category: Extra
+description: A simple guide for troubleshooting add-ons.
+prefix: "c. "
+nav_order: 3
+tags:
+    - help
+mentions:
+    - SirLich
+    - Joelant05
+    - destruc7ion
+    - Dreamedc2015
+    - MedicalJewel105
+    - Lufurrius
+    - SmokeyStack
+    - QuazChick
+---
+
+Creating add-ons for Minecraft is a relatively straightforward process _once you get the hang of it_. The first time is usually a frustrating, bug-prone process. This document contains some tips and tricks for fixing those dastardly bugs, as well as best practice information.
+
+Please read the whole page, before jumping into troubleshooting tips for a specific domain.
+
+## Reload
+
+First, you should always reload Minecraft. That means fully closing the game and then reopening it. This can catch many errors, especially those related to assets that are accessed via a filepath, such as textures or loot tables.
+
+## The Environment
+
+The best way to prevent nasty bugs is by working in the right environment. You should review the [software preparation document](/guide/software-preparation) for editor recommendations.
+
+The most important part is getting a JSON-linter, (or using an [online JSON-linter](https://jsonlint.com/)), and storing your packs in `development_behavior_packs` and `development_resource_packs`.
+If you have your add-ons in the normal folders, you can run into "pack caching" issues, where you edit the files in one location, but the game is still using the old files.
+
+## Content Log
+
+:::warning Use the Content Log!
+Content log is the best tool you have for debugging your add-ons. Please don't skip this step!
+:::
+
+:::tip
+Errors are not cleared between world loads, so the errors you see in the content log may be _old_ errors from prior loads.
+:::
+
+The 'Content Log' is a list of issues found in your pack. Minecraft will generate this list every time your load your world or change your global resource packs.
+
+It can catch issues such as:
+
+-   Wrong texture path
+-   Misspelled component
+-   Incorrect JSON format
+
+Content log can be turned on in in `Settings > Creator`. The content log will show in-game on load up, and if more errors occur during gameplay.
+
+![](/assets/images/guide/content_log.png)
+
+### Content Log File
+
+The content log is saved in `.txt` format inside your files:
+
+-   Windows: `%APPDATA%\logs`
+-   Android: `/storage/emulated/0/Android/data/com.mojang.minecraftpe/files/games/com.mojang/logs`
+
+## Using Vanilla Samples
+
+You can find the vanilla resource and behavior pack [here](https://github.com/Mojang/bedrock-samples).
+Comparing your code with vanilla could help you identify any issues!
+
+## JSON Schemas
+
+JSON Schemas are a valuable tool for file validation. You can learn more about JSON Schemas [here](/meta/using-schemas).
+
+## Troubleshooting Your Add-On
+
+### Blocks
+
+<Button link="/blocks/troubleshooting-blocks">Troubleshoot Your Blocks</Button>
+
+### Entities
+
+<Button link="/entities/troubleshooting-entities">Troubleshoot Your Entities</Button>
+
+### Items
+
+<Button link="/items/troubleshooting-items">Troubleshoot Your Items</Button>
