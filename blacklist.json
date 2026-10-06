@@ -1,0 +1,4 @@
+{
+  ".vitepress/*",
+  "guide/introduction.md"
+}
