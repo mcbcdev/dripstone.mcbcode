@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "guest": {
+    "asks_per_ip": 1,
+    "window_seconds": 86400
+  },
+  "free": {
+    "daily_credits": 150,
+    "reset_timezone": "UTC"
+  },
+  "pricing": {
+    "base_credits": 1,
+    "per_wiki_page": 1,
+    "per_mcp_call": 1,
+    "max_per_ask": 20
+  },
+  "unlimited": {
+    "any_rank": true,
+    "active_subscription_tier": "obsidian"
+  }
+}
