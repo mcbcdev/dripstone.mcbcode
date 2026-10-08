@@ -1,7 +1,7 @@
 {
   "version": 1,
   "guest": {
-    "asks_per_ip": 1,
+    "asks_per_ip": 3,
     "window_seconds": 86400
   },
   "free": {
@@ -10,7 +10,7 @@
   },
   "pricing": {
     "base_credits": 1,
-    "per_wiki_page": 1,
+    "per_wiki_page": 2,
     "per_mcp_call": 1,
     "max_per_ask": 20
   },
